@@ -270,12 +270,23 @@ String selectedCarType = "Sedan";
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child: Text("Name",
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black
-                                            ),),
+                                            child: Row(
+                                              children: [
+                                                Text("Name",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black
+                                                ),),
+                                                Text(
+                        " (Eg: Vios)",
+                        style: GoogleFonts.poppins(
+                          fontSize: 15,
+                          color: Colors.grey,
+                          // fontStyle: FontStyle.italic
+                        ),),
+                                              ],
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -311,12 +322,23 @@ String selectedCarType = "Sedan";
                                                   children: [
                                                     Padding(
                                                     padding: const EdgeInsets.all(3.0),
-                                                    child: Text("Model",
-                                                    style: GoogleFonts.poppins(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.black
-                                                    ),),
+                                                    child: Row(
+                                                      children: [
+                                                        Text("Model",
+                                                        style: GoogleFonts.poppins(
+                                                        fontSize: 20,
+                                                        fontWeight: FontWeight.bold,
+                                                        color: Colors.black
+                                                        ),),
+                                                        Text(
+                        " (Eg: 1.5T Standard)",
+                        style: GoogleFonts.poppins(
+                          fontSize: 15,
+                          color: Colors.grey,
+                          // fontStyle: FontStyle.italic
+                        ),),
+                                                      ],
+                                                    ),
                                                     ),
                                                   ],
                                                 ),

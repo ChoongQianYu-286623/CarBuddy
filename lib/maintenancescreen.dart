@@ -419,7 +419,7 @@ void _loadMaintenance() {
           DateTime maintenanceDate = DateTime(year, month, day);
 
           // Check if maintenanceDate is in the future before scheduling
-          if (maintenanceDate.isBefore(DateTime.now())) {
+          if (maintenanceDate.isAfter(DateTime.now())) {
             // Schedule the notification 1 day before the maintenance date
             LocalNotifications.showScheduleNotification(
               title: "Upcoming Maintenance",

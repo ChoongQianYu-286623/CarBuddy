@@ -243,7 +243,7 @@ DropdownButton<int>(
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: SizedBox(
-                          height: screenHeight*0.45,
+                          height: screenHeight*0.40,
                           child: LineChart(
   LineChartData(
     lineTouchData: LineTouchData(
@@ -352,6 +352,13 @@ DropdownButton<int>(
 
                         ),
                       ),
+                      Text(
+                        "**Fuel Consumptions: To calculate amount of fuel a car consumes to go a specific distance",
+                        style: GoogleFonts.poppins(
+                          fontSize: 10,
+                          color: Colors.grey,
+                          fontStyle: FontStyle.italic
+                        ),),
                     ],
                   ),
                   ),

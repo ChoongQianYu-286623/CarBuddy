@@ -96,11 +96,11 @@ class _SplashScreenState extends State<SplashScreen> {
                   password: "na",
                   otp: "na");
               Timer(
-                  const Duration(seconds: 3),
+                  const Duration(seconds: 1),
                   () => Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (content) => MainScreen(user: user))));
+                          builder: (content) => const LoginScreen())));
             }
           } else {
             user = User(
@@ -112,11 +112,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 password: "na",
                 otp: "na");
             Timer(
-                const Duration(seconds: 3),
+                const Duration(seconds: 1),
                 () => Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (content) => MainScreen(user: user))));
+                        builder: (content) => const LoginScreen())));
           }
         }).timeout(const Duration(seconds: 5), onTimeout: () {
           // Time has run out, do what you wanted to do.
@@ -135,7 +135,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Timer(
           const Duration(seconds: 3),
           () => Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (content) => MainScreen(user: user))));
+              MaterialPageRoute(builder: (content) => const LoginScreen())));
     }
   }
 }

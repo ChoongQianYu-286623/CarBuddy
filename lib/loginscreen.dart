@@ -41,6 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Center(
           child: Column(
         children: [
+          const SizedBox(height: 20,),
           Text(
             "C A R B U D D Y",
             style: GoogleFonts.titanOne(
@@ -58,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           const SizedBox(height: 10), // Add some space between the texts
           SizedBox(
-              height: screenHeight * 0.45,
+              height: screenHeight * 0.35,
               width: screenWidth,
              child: Image.asset("assets/images/logo.png",
              fit: BoxFit.contain,),
@@ -186,15 +187,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           const SizedBox(
                           height: 8,
                           ),
-                          GestureDetector(
-                            onTap: _forgotDialog,
-                            child: Text("Forgot Password?",
-                            style: GoogleFonts.poppins(
-                              fontSize: 12,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w400
-                            ),)
-                          ),
+                          // GestureDetector(
+                          //   onTap: _forgotDialog,
+                          //   child: Text("Forgot Password?",
+                          //   style: GoogleFonts.poppins(
+                          //     fontSize: 12,
+                          //     color: Colors.white,
+                          //     fontWeight: FontWeight.w400
+                          //   ),)
+                          // ),
             ],
           ))
         ],
@@ -256,8 +257,8 @@ class _LoginScreenState extends State<LoginScreen> {
      Navigator.push(context, MaterialPageRoute(builder: (content) => const RegistrationScreen()));
   }
 
-  void _forgotDialog() {
-  }
+  // void _forgotDialog() {
+  // }
 
   void saveremovepref(bool value) async{
     FocusScope.of(context).requestFocus(FocusNode());
