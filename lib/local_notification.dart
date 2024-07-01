@@ -1,5 +1,6 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -10,6 +11,11 @@ class LocalNotifications {
   // on tap on any notification
   static void onNotificationTap(NotificationResponse notificationResponse) {
     onClickNotification.add(notificationResponse.payload!);
+  }
+
+  // Request notification permissions
+  static Future<void> _requestPermissions() async {
+    await Permission.notification.request();
   }
 
 //initialize the local notifications

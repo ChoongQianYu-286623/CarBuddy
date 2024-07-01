@@ -490,7 +490,7 @@ class _AddFuelScreenState extends State<AddFuelScreen> {
                                 validator: (val) => val!.isEmpty
                                 ? "Location must not be empty"
                                 : null,
-                                keyboardType: TextInputType.number,
+                                keyboardType: TextInputType.text,
                                 textAlign: TextAlign.left,
                                  style: GoogleFonts.poppins(
                                   fontSize: 15,

@@ -22,6 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   late double screenHeight, screenWidth, cardwitdh;
   bool _isChecked = false;
+    bool _isObscure = true;
 
   @override
   void initState(){
@@ -108,20 +109,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     validator: (val) => val!.isEmpty || (val.length < 5)
                       ? "Password must be longer than 5"
                       : null,
-                    obscureText: true,
-                    decoration: const InputDecoration(
+                    obscureText: _isObscure,
+                    decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
                       labelText: 'Enter your password',
-                      labelStyle: TextStyle(
+                      labelStyle: const TextStyle(
                         fontSize: 15,
                         color: Color.fromRGBO(217, 217, 217, 1)
                     ),
-                    prefixIcon: Icon(Icons.key),
-                     enabledBorder: OutlineInputBorder(
+                    suffixIcon: IconButton(
+                      icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off),
+                      onPressed: (){
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },),
+                    prefixIcon: const Icon(Icons.key),
+                     enabledBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                  ),
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide.none,
                     borderRadius: BorderRadius.all(Radius.circular(30)),
                               ),
